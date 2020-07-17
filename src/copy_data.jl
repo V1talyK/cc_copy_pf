@@ -5,7 +5,7 @@ include("clickHouse.jl")
 proxy="192.168.1.60";
 cok=Dict("cma"=>"0357a0f4-c110-41e1-b465-23cf8b964f3b","cdb"=>"","csql"=>"30","ch"=>"ch30");
 
-r2c=makeRef("ccord_data:5f06b8be7ddd74004c7d8e74"); #Копируем
+r2c=makeRef("ccord_data:5f06b8be7ddd74004c7d8e74"); #Копируем (Ссылка на карточку с копированием)
 obj=get_object(r2c, cok)["items"];
 r_src = obj["src"]
 r_dest= obj["dest"]
