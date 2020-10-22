@@ -57,13 +57,13 @@ begin #Поля
 end
 
 begin #Регрессия
-    fld = ["wi","a","b", "shift_b", "shift_b_last"]
+    filds = ["wi","a","b", "shift_b", "shift_b_last"]
     capt = ["id","a","b","shift_b", "shift_b_last"]
 
-    clm=Vector(undef, length(fld))
+    clm=Vector(undef, length(filds))
     sz=50*ones(length(capt)); sz[1]=16;
-    for i=1:length(clm) clm[i]=Dict("field"=>fld[i],"caption"=> capt[i],"size"=>sz[i]);    end;
-    merge!(clm[length(fld)],Dict("render"=> "toggle"))
+    for i=1:length(clm) clm[i]=Dict("field"=>filds[i],"caption"=> capt[i],"size"=>sz[i]);    end;
+    merge!(clm[length(filds)],Dict("render"=> "toggle"))
     merge!(clm[1],Dict("hidden"=> true))
 
     dropTlbInCH(chnames_dest[4],cok)
